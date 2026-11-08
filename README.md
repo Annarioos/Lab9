@@ -54,15 +54,15 @@ graph TD
     DoCond -->|Нет| End([Конец программы])
 
     %% --- ПОДПРОГРАММЫ ---
-    subgraph Функция pif(r, c)
+    subgraph "Функция pif"
         pif_start([pif]) --> pif_ret[return r * c]
     end
 
-    subgraph Функция mat(r)
+    subgraph "Функция mat"
         mat_start([mat]) --> mat_ret[return r * 5]
     end
 
-    subgraph Функция summa(num)
+    subgraph "Функция summa"
         sum_start([summa]) --> sum_init[sum = 0]
         sum_init --> sum_div[num = num / 10]
         sum_div --> sum_while{num > 0}
@@ -76,4 +76,5 @@ graph TD
         
         sum_while -->|Нет| sum_ret[return sum]
     end
+
 ```
