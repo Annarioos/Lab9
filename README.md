@@ -49,7 +49,7 @@ graph TD
     CallSumma --> PrintResult[Печать результата s]
     PrintResult --> AskOtv[Запрос и ввод ответа: otv]
     
-    AskOtv --> DoCond{otv == 'y' || otv == 'Y'}
+    AskOtv --> DoCond{"otv == 'y' || otv == 'Y'"}
     DoCond -->|Да| DoStart
     DoCond -->|Нет| End([Конец программы])
 
